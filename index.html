@@ -1,0 +1,601 @@
+<!DOCTYPE html><html lang="pl" class="dark"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>RAM Sniper PARALLEL</title>
+    <!-- iOS Viewport & Scaling Fix -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <script src="https://cdn.tailwindcss.com"></script><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { gray: { 900: '#111827', 800: '#1f2937', 700: '#374151' } } } } }</script>
+    <style>
+        body { background-color: #0f1115; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-text-size-adjust: 100%; }
+    </style>
+    </head><body class="text-gray-300 min-h-screen flex flex-col"><nav class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur border-b border-gray-800"><div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"><div class="flex items-center gap-3"><div class="bg-green-600 p-2 rounded-lg text-white"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div><div><h1 class="text-xl font-bold text-white tracking-tight">RAM Sniper <span class="text-green-500">PARALLEL</span></h1><div class="flex items-center gap-2 text-xs text-green-400 font-mono"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span></span>X-Kom + Morele + Sferis + OleOle + MediaExpert + Komputronik</div></div></div></div></nav><main class="flex-1 max-w-7xl w-full mx-auto px-4 py-8 space-y-8"><div class="grid grid-cols-1 md:grid-cols-3 gap-6"><div class="md:col-span-2 bg-gray-800 rounded-xl p-6 border border-gray-700"><h3 class="text-gray-400 text-sm font-medium mb-4">Trend Cenowy</h3><div class="h-48 relative w-full"><canvas id="priceChart"></canvas></div></div><div class="bg-gray-800 rounded-xl p-6 border border-gray-700 flex flex-col justify-center items-center text-center"><div class="mb-2 p-3 bg-gray-900 rounded-full text-green-500"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div><h3 class="text-gray-400 text-sm">Ostatnia aktualizacja</h3><p class="text-2xl font-bold text-white mt-1">08:35</p></div></div><div><h2 class="text-xl font-bold text-white mb-4 flex items-center gap-2"><span class="w-1 h-6 bg-green-600 rounded-full"></span>Wyniki Celowane (Równoległe)</h2><div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg flex flex-col">
+            <div class="bg-gray-900/80 px-4 py-3 border-b border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <h3 class="text-gray-100 font-bold text-sm uppercase tracking-wider truncate" title="16GB (1x16GB)">16GB (1x16GB)</h3>
+            </div>
+            <div class="p-3 flex-1 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
+                <div class="flex items-start justify-between p-3 bg-gray-700/50 border-green-500/50 border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">morele</span>
+                            <span class="text-[10px] bg-green-900/60 text-green-300 px-2 py-0.5 rounded border border-green-700/50">NAJTANIEJ</span>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć PNY Performance, DDR5, 16 GB, 5600MHz, CL40 (MD16GSD55600-SB)">Pamięć PNY Performance, DDR5, 16 GB, 5600MHz, CL40 (MD16GSD55600-SB)</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-green-400 font-mono">804.38 zł</div>
+                        <a href="https://www.morele.net/pamiec-pny-performance-ddr5-16-gb-5600mhz-cl40-md16gsd55600-sb-15568523/" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">komputronik</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Crucial Pro 16GB [1x16GB 5600MHz DDR5 CL46 UDIMM]">Crucial Pro 16GB [1x16GB 5600MHz DDR5 CL46 UDIMM]</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">809.00 zł</div>
+                        <a href="https://www.komputronik.pl/product/862708/ram-crucial-pro-16gb-1x16gb-5600mhz-ddr5-cl46-udimm-.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">sferis</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Patriot Viper Venom DDR5 16GB (1x16GB) 6000MT/sDDR5 / 16 GB / 1 x 16 GB / 30910,82 złRata już od:20,85 złDostawa 0złRaty 0%Nowość()">Patriot Viper Venom DDR5 16GB (1x16GB) 6000MT/sDDR5 / 16 GB / 1 x 16 GB / 30910,82 złRata już od:20,85 złDostawa 0złRaty 0%Nowość()</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">910.82 zł</div>
+                        <a href="https://www.sferis.pl/patriot-viper-venom-ddr5-16gb-1x16gb-6000mt-s-i644892" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">mediaexpert</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć RAM PNY Performance MD16GSD55600-SB 16GB 5600MHz">Pamięć RAM PNY Performance MD16GSD55600-SB 16GB 5600MHz</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1002.75 zł</div>
+                        <a href="https://www.mediaexpert.pl/komputery-i-tablety/podzespoly-komputerowe/pamieci-ram/pamiec-ram-pny-performance-md16gsd55600-sb-16gb-5600mhz" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">x-kom</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="GOODRAM 16GB (1x16GB) 7600 CL36 IRDM BLACK V SILVER">GOODRAM 16GB (1x16GB) 7600 CL36 IRDM BLACK V SILVER</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1999.00 zł</div>
+                        <a href="https://www.x-kom.pl/p/1474331-pamiec-ram-ddr5-goodram-16gb-1x16gb-7600-cl36-irdm-black-v-silver.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg flex flex-col">
+            <div class="bg-gray-900/80 px-4 py-3 border-b border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <h3 class="text-gray-100 font-bold text-sm uppercase tracking-wider truncate" title="32GB (1x32GB)">32GB (1x32GB)</h3>
+            </div>
+            <div class="p-3 flex-1 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
+                <div class="flex items-start justify-between p-3 bg-gray-700/50 border-green-500/50 border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">komputronik</span>
+                            <span class="text-[10px] bg-green-900/60 text-green-300 px-2 py-0.5 rounded border border-green-700/50">NAJTANIEJ</span>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Crucial Pro 32GB [1x32GB 5600MHz DDR5 CL46 UDIMM]">Crucial Pro 32GB [1x32GB 5600MHz DDR5 CL46 UDIMM]</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-green-400 font-mono">1579.00 zł</div>
+                        <a href="https://www.komputronik.pl/product/862669/ram-crucial-pro-32gb-1x32gb-5600mhz-ddr5-cl46-udimm-.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">morele</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć Kingston Fury Beast, DDR5, 32 GB, 5600MHz, CL36 (KF556C36BBE-32)">Pamięć Kingston Fury Beast, DDR5, 32 GB, 5600MHz, CL36 (KF556C36BBE-32)</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1899.00 zł</div>
+                        <a href="https://www.morele.net/pamiec-kingston-fury-beast-ddr5-32-gb-5600mhz-cl36-kf556c36bbe-32-12744628/" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">x-kom</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Kingston FURY 32GB (1x32GB) 5600MHz CL40 Beast Black">Kingston FURY 32GB (1x32GB) 5600MHz CL40 Beast Black</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1899.00 zł</div>
+                        <a href="https://www.x-kom.pl/p/1067764-pamiec-ram-ddr5-kingston-fury-32gb-1x32gb-5600mhz-cl40-beast-black.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">sferis</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Lenovo LOQ 15IRX10 i5-13450HX 15.6&quot; FHD IPS 300nits AG 144Hz 32GB DDR5 4800 SSD512 GeForce RTX 5050 8GB Cam 5.0MP 60Wh NoOS Luna Grey">Lenovo LOQ 15IRX10 i5-13450HX 15.6&quot; FHD IPS 300nits AG 144Hz 32GB DDR5 4800 SSD512 GeForce RTX 5050 8GB Cam 5.0MP 60Wh NoOS Luna Grey</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">4199.00 zł</div>
+                        <a href="https://www.sferis.pl/lenovo-loq-15irx10-i5-13450hx-15-6-fhd-ips-300nits-ag-144hz-32gb-ddr5-4800-ssd512-geforce-rtx-5050-8gb-cam-5-0mp-60wh-noos-luna-grey-i661652" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg flex flex-col">
+            <div class="bg-gray-900/80 px-4 py-3 border-b border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <h3 class="text-gray-100 font-bold text-sm uppercase tracking-wider truncate" title="48GB (1x48GB)">48GB (1x48GB)</h3>
+            </div>
+            <div class="p-3 flex-1 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
+                <div class="flex items-start justify-between p-3 bg-gray-700/50 border-green-500/50 border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">komputronik</span>
+                            <span class="text-[10px] bg-green-900/60 text-green-300 px-2 py-0.5 rounded border border-green-700/50">NAJTANIEJ</span>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Crucial Pro 48GB [1x48GB 5600MHz DDR5 CL46 UDIMM]">Crucial Pro 48GB [1x48GB 5600MHz DDR5 CL46 UDIMM]</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-green-400 font-mono">2299.00 zł</div>
+                        <a href="https://www.komputronik.pl/product/862667/ram-crucial-pro-48gb-2x24gb-5600mhz-ddr5-cl46-udimm-.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg flex flex-col">
+            <div class="bg-gray-900/80 px-4 py-3 border-b border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <h3 class="text-gray-100 font-bold text-sm uppercase tracking-wider truncate" title="64GB (1x64GB)">64GB (1x64GB)</h3>
+            </div>
+            <div class="p-3 flex-1 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
+                <div class="flex items-start justify-between p-3 bg-gray-700/50 border-green-500/50 border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">x-kom</span>
+                            <span class="text-[10px] bg-green-900/60 text-green-300 px-2 py-0.5 rounded border border-green-700/50">NAJTANIEJ</span>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Kingston FURY 64GB (1x64GB) 5600 CL36 Beast Black">Kingston FURY 64GB (1x64GB) 5600 CL36 Beast Black</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-green-400 font-mono">3299.00 zł</div>
+                        <a href="https://www.x-kom.pl/p/1340186-pamiec-ram-ddr5-kingston-fury-64gb-1x64gb-5600-cl36-beast-black.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">komputronik</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Crucial Pro 64GB [1x64GB 5600MHz DDR5 CL46 UDIMM]">Crucial Pro 64GB [1x64GB 5600MHz DDR5 CL46 UDIMM]</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">3449.00 zł</div>
+                        <a href="https://www.komputronik.pl/product/958587/ram-crucial-pro-64gb-1x64gb-5600mhz-ddr5-cl46-udimm-.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">morele</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć Kingston Fury Beast, DDR5, 64 GB, 5600MHz, CL36 (KF556C36BBE-64)">Pamięć Kingston Fury Beast, DDR5, 64 GB, 5600MHz, CL36 (KF556C36BBE-64)</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">3899.00 zł</div>
+                        <a href="https://www.morele.net/pamiec-kingston-fury-beast-ddr5-64-gb-5600mhz-cl36-kf556c36bbe-64-15245796/" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg flex flex-col">
+            <div class="bg-gray-900/80 px-4 py-3 border-b border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <h3 class="text-gray-100 font-bold text-sm uppercase tracking-wider truncate" title="32GB (2x16GB)">32GB (2x16GB)</h3>
+            </div>
+            <div class="p-3 flex-1 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
+                <div class="flex items-start justify-between p-3 bg-gray-700/50 border-green-500/50 border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">morele</span>
+                            <span class="text-[10px] bg-green-900/60 text-green-300 px-2 py-0.5 rounded border border-green-700/50">NAJTANIEJ</span>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć Patriot Viper Venom, DDR5, 16 GB, 5600MHz, CL40 (PVV516G560C40K)">Pamięć Patriot Viper Venom, DDR5, 16 GB, 5600MHz, CL40 (PVV516G560C40K)</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-green-400 font-mono">1308.76 zł</div>
+                        <a href="https://www.morele.net/pamiec-patriot-viper-venom-ddr5-16-gb-5600mhz-cl40-pvv516g560c40k-11811208/" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">oleole</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć RAM Kingston FURY Beast RGB DDR5 16GB (2 x 8GB) 6000 CL30 EXPO Czarny">Pamięć RAM Kingston FURY Beast RGB DDR5 16GB (2 x 8GB) 6000 CL30 EXPO Czarny</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1519.00 zł</div>
+                        <a href="https://www.oleole.pl/pamieci-ram/kingston-pam-king-16g-6000-d5-cl30-kitof2-fu-rg-e.bhtml" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">komputronik</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Patriot Viper Venom 32GB [2x16GB 6400MHz DDR5 CL32 DIMM]">Patriot Viper Venom 32GB [2x16GB 6400MHz DDR5 CL32 DIMM]</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1640.00 zł</div>
+                        <a href="https://www.komputronik.pl/product/868163/ram-patriot-viper-venom-rgb-32gb-2x16gb-6400mhz-ddr5-cl32-dimm-.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">sferis</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="PATRIOT DDR5 2x16GB 5600MHz SIGNATURE PREMIUM KITDDR5 / 32 GB / 2 x 16 GB / 401 685,26 złRata już od:38,53 złDostawa 0złRaty 0%()">PATRIOT DDR5 2x16GB 5600MHz SIGNATURE PREMIUM KITDDR5 / 32 GB / 2 x 16 GB / 401 685,26 złRata już od:38,53 złDostawa 0złRaty 0%()</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1685.26 zł</div>
+                        <a href="https://www.sferis.pl/patriot-ddr5-2x16gb-5600mhz-signature-premium-kit-i340671" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">x-kom</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Patriot 32GB (2x16GB) 6000MT/s CL30 Venom">Patriot 32GB (2x16GB) 6000MT/s CL30 Venom</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1909.00 zł</div>
+                        <a href="https://www.x-kom.pl/p/1258925-pamiec-ram-ddr5-patriot-32gb-2x16gb-6000mt-s-cl30-venom.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">mediaexpert</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć RAM LEXAR Ares Gaming 32GB (2x16GB) 6000MHz">Pamięć RAM LEXAR Ares Gaming 32GB (2x16GB) 6000MHz</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">2159.00 zł</div>
+                        <a href="https://www.mediaexpert.pl/komputery-i-tablety/podzespoly-komputerowe/pamieci-ram/pamiec-ddr5-ares-gaming-32gb-2x16gb-6000mt-s" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg flex flex-col">
+            <div class="bg-gray-900/80 px-4 py-3 border-b border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <h3 class="text-gray-100 font-bold text-sm uppercase tracking-wider truncate" title="48GB (2x24GB)">48GB (2x24GB)</h3>
+            </div>
+            <div class="p-3 flex-1 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
+                <div class="flex items-start justify-between p-3 bg-gray-700/50 border-green-500/50 border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">morele</span>
+                            <span class="text-[10px] bg-green-900/60 text-green-300 px-2 py-0.5 rounded border border-green-700/50">NAJTANIEJ</span>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć G.Skill Trident Z5 RGB, DDR5, 48 GB, 7200MHz, CL36 (F5-7200J3646F24GX2-TZ5RW)">Pamięć G.Skill Trident Z5 RGB, DDR5, 48 GB, 7200MHz, CL36 (F5-7200J3646F24GX2-TZ5RW)</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-green-400 font-mono">1710.63 zł</div>
+                        <a href="https://www.morele.net/pamiec-g-skill-trident-z5-rgb-ddr5-48-gb-7200mhz-cl36-f5-7200j3646f24gx2-tz5rw-13273548/" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">komputronik</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Crucial Pro 48GB [2x24GB 5600MHz DDR5 CL46 UDIMM]">Crucial Pro 48GB [2x24GB 5600MHz DDR5 CL46 UDIMM]</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">2549.00 zł</div>
+                        <a href="https://www.komputronik.pl/product/870928/ram-crucial-pro-48gb-2x24gb-5600mhz-ddr5-cl46-udimm-.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">oleole</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć RAM Corsair Vengeance RGB DDR5 48GB (2 x 24GB) 6400 CL36 Czarny">Pamięć RAM Corsair Vengeance RGB DDR5 48GB (2 x 24GB) 6400 CL36 Czarny</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">2769.00 zł</div>
+                        <a href="https://www.oleole.pl/pamieci-ram/corsair-p-ram-corsair-veng-rgb-d5-2x24-6400-cl36.bhtml" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">x-kom</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Corsair 48GB (2x24GB) DDR5 6400 CL36 VENGEANCE RGB">Corsair 48GB (2x24GB) DDR5 6400 CL36 VENGEANCE RGB</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">2799.00 zł</div>
+                        <a href="https://www.x-kom.pl/p/1347078-pamiec-ram-ddr5-corsair-48gb-2x24gb-ddr5-6400-cl36-vengeance-rgb.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg flex flex-col">
+            <div class="bg-gray-900/80 px-4 py-3 border-b border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <h3 class="text-gray-100 font-bold text-sm uppercase tracking-wider truncate" title="64GB (2x32GB)">64GB (2x32GB)</h3>
+            </div>
+            <div class="p-3 flex-1 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
+                <div class="flex items-start justify-between p-3 bg-gray-700/50 border-green-500/50 border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">komputronik</span>
+                            <span class="text-[10px] bg-green-900/60 text-green-300 px-2 py-0.5 rounded border border-green-700/50">NAJTANIEJ</span>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Patriot Viper Venom 64GB [2x32GB 6400MHz DDR5 CL32 DIMM]">Patriot Viper Venom 64GB [2x32GB 6400MHz DDR5 CL32 DIMM]</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-green-400 font-mono">2870.00 zł</div>
+                        <a href="https://www.komputronik.pl/product/876330/ram-patriot-viper-venom-64gb-2x32gb-6400mhz-ddr5-cl32-dimm-.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">x-kom</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Patriot 64GB (2x32GB) 6400MHz CL32 Viper VENOM">Patriot 64GB (2x32GB) 6400MHz CL32 Viper VENOM</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">2899.00 zł</div>
+                        <a href="https://www.x-kom.pl/p/1163352-pamiec-ram-ddr5-patriot-64gb-2x32gb-6400mhz-cl32-viper-venom.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">morele</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć G.Skill Aegis 5, DDR5, 64 GB, 6000MHz, CL36 (F5-6000J3636F32GX2-IS)">Pamięć G.Skill Aegis 5, DDR5, 64 GB, 6000MHz, CL36 (F5-6000J3636F32GX2-IS)</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">2999.00 zł</div>
+                        <a href="https://www.morele.net/pamiec-g-skill-aegis-5-ddr5-64-gb-6000mhz-cl36-f5-6000j3636f32gx2-is-14635358/" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">oleole</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć RAM Crucial Pro Overclocking DDR5 64GB (2x32GB) 6000 CL40 Biały">Pamięć RAM Crucial Pro Overclocking DDR5 64GB (2x32GB) 6000 CL40 Biały</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">3249.00 zł</div>
+                        <a href="https://www.oleole.pl/pamieci-ram/crucial-p-ram-crucial-pro-2x32-d5-6000.bhtml" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">sferis</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć DDR5 PATRIOT Viper Venom 2x32GB 6000MHz CL36 XMP3 (PVV564G600C36K)DDR5 / 64 GB / 2 x 32 GB / 363 581,56 złRata już od:81,60 złDostawa 0złRaty 0%()">Pamięć DDR5 PATRIOT Viper Venom 2x32GB 6000MHz CL36 XMP3 (PVV564G600C36K)DDR5 / 64 GB / 2 x 32 GB / 363 581,56 złRata już od:81,60 złDostawa 0złRaty 0%()</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">3581.56 zł</div>
+                        <a href="https://www.sferis.pl/pamiec-ddr5-patriot-viper-venom-2x32gb-6000mhz-cl36-xmp3-pvv564g600c36k-i351273" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">mediaexpert</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć RAM KINGSTON Fury Renegade RGB 64GB (2x32GB) 6400MHz">Pamięć RAM KINGSTON Fury Renegade RGB 64GB (2x32GB) 6400MHz</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">7264.75 zł</div>
+                        <a href="https://www.mediaexpert.pl/komputery-i-tablety/podzespoly-komputerowe/pamieci-ram/pamiec-ram-kingston-fury-renegade-rgb-64gb-2x32gb-6400mhz-1" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg flex flex-col">
+            <div class="bg-gray-900/80 px-4 py-3 border-b border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <h3 class="text-gray-100 font-bold text-sm uppercase tracking-wider truncate" title="96GB (2x48GB)">96GB (2x48GB)</h3>
+            </div>
+            <div class="p-3 flex-1 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
+                <div class="flex items-start justify-between p-3 bg-gray-700/50 border-green-500/50 border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">morele</span>
+                            <span class="text-[10px] bg-green-900/60 text-green-300 px-2 py-0.5 rounded border border-green-700/50">NAJTANIEJ</span>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć G.Skill Ripjaws S5, DDR5, 96 GB, 6000MHz, CL30 (F5-6000J3036F48GX2-RS5W)">Pamięć G.Skill Ripjaws S5, DDR5, 96 GB, 6000MHz, CL30 (F5-6000J3036F48GX2-RS5W)</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-green-400 font-mono">4042.94 zł</div>
+                        <a href="https://www.morele.net/pamiec-g-skill-ripjaws-s5-ddr5-96-gb-6000mhz-cl30-f5-6000j3036f48gx2-rs5w-14508021/" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">komputronik</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Crucial Pro 96GB [2x48GB 5600MHz DDR5 CL46 UDIMM]">Crucial Pro 96GB [2x48GB 5600MHz DDR5 CL46 UDIMM]</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">4299.00 zł</div>
+                        <a href="https://www.komputronik.pl/product/870926/ram-crucial-pro-96gb-2x48gb-5600mhz-ddr5-cl46-udimm-.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">sferis</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Patriot Viper Elite5 Ultra DDR5 2x48GB 6000MHz CL28DDR5 / 96 GB / 2 x 48 GB / 285 794,28 złRata już od:131,46 złDostawa 0złRaty 0%()">Patriot Viper Elite5 Ultra DDR5 2x48GB 6000MHz CL28DDR5 / 96 GB / 2 x 48 GB / 285 794,28 złRata już od:131,46 złDostawa 0złRaty 0%()</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">5794.28 zł</div>
+                        <a href="https://www.sferis.pl/patriot-viper-elite5-ultra-ddr5-2x48gb-6000mhz-cl28-i597109" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">oleole</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć RAM G.Skill Ripjaws S5 DDR5 96GB (2x48GB) 6400 CL32 Czarny">Pamięć RAM G.Skill Ripjaws S5 DDR5 96GB (2x48GB) 6400 CL32 Czarny</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">6179.00 zł</div>
+                        <a href="https://www.oleole.pl/pamieci-ram/g-skill-p-ram-gskill-ripjaws-2x48-d5-6400-cl32.bhtml" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">x-kom</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Patriot 96GB (2x48GB) 6000 CL28 VIPER RGB Elite 5 Ultra">Patriot 96GB (2x48GB) 6000 CL28 VIPER RGB Elite 5 Ultra</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">6999.00 zł</div>
+                        <a href="https://www.x-kom.pl/p/1348736-pamiec-ram-ddr5-patriot-96gb-2x48gb-6000-cl28-viper-rgb-elite-5-ultra.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 shadow-lg flex flex-col">
+            <div class="bg-gray-900/80 px-4 py-3 border-b border-gray-700 flex justify-between items-center backdrop-blur-sm">
+                <h3 class="text-gray-100 font-bold text-sm uppercase tracking-wider truncate" title="Najtańsza DDR5 (Ogólnie)">Najtańsza DDR5 (Ogólnie)</h3>
+            </div>
+            <div class="p-3 flex-1 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent">
+                
+                <div class="flex items-start justify-between p-3 bg-gray-700/50 border-green-500/50 border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">morele</span>
+                            <span class="text-[10px] bg-green-900/60 text-green-300 px-2 py-0.5 rounded border border-green-700/50">NAJTANIEJ</span>
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć PNY Performance, DDR5, 16 GB, 5600MHz, CL40 (MD16GSD55600-SB)">Pamięć PNY Performance, DDR5, 16 GB, 5600MHz, CL40 (MD16GSD55600-SB)</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-green-400 font-mono">804.38 zł</div>
+                        <a href="https://www.morele.net/pamiec-pny-performance-ddr5-16-gb-5600mhz-cl40-md16gsd55600-sb-15568523/" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">komputronik</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Crucial Pro 16GB [1x16GB 5600MHz DDR5 CL46 UDIMM]">Crucial Pro 16GB [1x16GB 5600MHz DDR5 CL46 UDIMM]</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">809.00 zł</div>
+                        <a href="https://www.komputronik.pl/product/862708/ram-crucial-pro-16gb-1x16gb-5600mhz-ddr5-cl46-udimm-.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">sferis</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Patriot Viper Venom DDR5 16GB (1x16GB) 6000MT/sDDR5 / 16 GB / 1 x 16 GB / 30910,82 złRata już od:20,85 złDostawa 0złRaty 0%Nowość()">Patriot Viper Venom DDR5 16GB (1x16GB) 6000MT/sDDR5 / 16 GB / 1 x 16 GB / 30910,82 złRata już od:20,85 złDostawa 0złRaty 0%Nowość()</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">910.82 zł</div>
+                        <a href="https://www.sferis.pl/patriot-viper-venom-ddr5-16gb-1x16gb-6000mt-s-i644892" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">mediaexpert</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć RAM PNY Performance MD16GSD55600-SB 16GB 5600MHz">Pamięć RAM PNY Performance MD16GSD55600-SB 16GB 5600MHz</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1002.75 zł</div>
+                        <a href="https://www.mediaexpert.pl/komputery-i-tablety/podzespoly-komputerowe/pamieci-ram/pamiec-ram-pny-performance-md16gsd55600-sb-16gb-5600mhz" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">oleole</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Pamięć RAM Kingston FURY Beast RGB DDR5 16GB (2 x 8GB) 6000 CL30 EXPO Czarny">Pamięć RAM Kingston FURY Beast RGB DDR5 16GB (2 x 8GB) 6000 CL30 EXPO Czarny</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1519.00 zł</div>
+                        <a href="https://www.oleole.pl/pamieci-ram/kingston-pam-king-16g-6000-d5-cl30-kitof2-fu-rg-e.bhtml" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+                <div class="flex items-start justify-between p-3 bg-gray-800 border-transparent border-l-4 mb-2 rounded transition-colors duration-200">
+                    <div class="flex-1 min-w-0 mr-3">
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-gray-900 text-gray-300 uppercase tracking-wider">x-kom</span>
+                            
+                        </div>
+                        <div class="text-sm text-gray-300 leading-tight" title="Kingston FURY 32GB (1x32GB) 5600MHz CL40 Beast Black">Kingston FURY 32GB (1x32GB) 5600MHz CL40 Beast Black</div>
+                    </div>
+                    <div class="text-right flex flex-col items-end min-w-[80px]">
+                        <div class="text-lg font-bold text-gray-400 font-mono">1899.00 zł</div>
+                        <a href="https://www.x-kom.pl/p/1067764-pamiec-ram-ddr5-kingston-fury-32gb-1x32gb-5600mhz-cl40-beast-black.html" target="_blank" class="mt-2 text-[10px] px-3 py-1 rounded-full bg-gray-700 hover:bg-gray-600 text-gray-300 transition-colors uppercase font-bold tracking-wide">IDŹ DO SKLEPU</a>
+                    </div>
+                </div>
+            </div>
+        </div></div></div></main><script>const ctx = document.getElementById('priceChart').getContext('2d');new Chart(ctx, { type: 'line', data: { labels: ["03.01 15:03", "03.01 15:40", "04.01 10:07", "04.01 15:39", "04.01 23:15", "05.01 10:54", "05.01 11:06", "06.01 11:46", "06.01 17:53", "06.01 20:04", "06.01 21:41", "07.01 06:59", "08.01 06:05", "08.01 08:18", "09.01 07:48", "09.01 08:35"], datasets: [{ label: 'Cena', data: [799.99, 799.99, 799.99, 799.99, 799.99, 743.99, 743.99, 804.31, 804.31, 804.31, 804.31, 804.31, 804.35, 804.35, 804.38, 804.38], borderColor: '#22c55e', backgroundColor: 'rgba(34, 197, 94, 0.1)', borderWidth: 2, tension: 0.4, fill: true, pointRadius: 3 }] }, options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: '#374151' }, ticks: { color: '#9ca3af' } }, x: { grid: { display: false }, ticks: { color: '#9ca3af' } } } } });</script></body></html>

@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Profile przeglądarki (bardzo duże!)
+chrome_profile_multi/
+chrome_profile_test/
+chrome_profile_v2/
+chrome_profile/
+
+# Pliki systemowe
+.DS_Store
+Thumbs.db
+
+
+# Inne
+*.log
+
+# Pliki tymczasowe raportu
+*.csv
+*.xlsx
+*.docx
+debug_*.json
+ceny_targeted.json
+raport_targeted.html
+raport_targeted_excel.csv
+raport_targeted_parallel_excel.csv
+ram_sniper_parallel_mobile
